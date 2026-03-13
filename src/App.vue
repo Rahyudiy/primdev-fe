@@ -5,7 +5,7 @@ import MainFooter from './components/MainFooter.vue'
 </script>
 
 <template>
-  <main class="">
+  <main class="container mx-auto">
     <MainNavbar />
     <HeroSection />
     <MainFooter />
