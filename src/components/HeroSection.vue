@@ -3,7 +3,7 @@
 <template>
   <section>
     <div
-      class="container mx-auto mt-30 rounded-3xl h-[600px] bg-cover bg-center relative overflow-hidden"
+      class="container mx-auto mt-30 rounded-3xl h-150 bg-cover bg-center relative overflow-hidden"
       style="background-image: url('/src/assets/images/hero-2.jpg')"
     >
       <!-- OVERLAY CONTENT -->
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="mx-auto flex gap-5 items-left justify-center">
-      <div class="container mx-auto mt-5 rounded-3xl h-[250px] relative overflow-hidden group">
+      <div class="container mx-auto mt-5 rounded-3xl h-62.5 relative overflow-hidden group">
         <div
           class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
           style="background-image: url('/src/assets/images/hero-1.jpg')"
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="container mx-auto mt-5 rounded-3xl h-[250px] relative overflow-hidden group">
+      <div class="container mx-auto mt-5 rounded-3xl h-62.5 relative overflow-hidden group">
         <div
           class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
           style="background-image: url('/src/assets/images/hero-3.jpg')"
