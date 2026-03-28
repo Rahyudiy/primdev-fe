@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import ProductCard from '../product/productCard.vue'
-// Dummy data produk yang disimpan di dalam state reactive
+import ProductCard from '../product/ProductCard.vue'
 const products = ref([
   {
     id: 1,
@@ -69,9 +68,7 @@ const products = ref([
       <p class="text-gray-500 mt-1">Lihat semua jenis produk terbaru kami</p>
     </div>
 
-    <!-- Wrapper GRID (Responsif) -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <!-- Looping Product Card -->
       <ProductCard v-for="product in products" :key="product.id" :product="product" />
     </div>
   </section>
