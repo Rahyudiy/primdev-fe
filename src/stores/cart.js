@@ -25,7 +25,24 @@ function remove(id) {
 const totalItems = computed(() => state.items.reduce((sum, item) => sum + item.qty, 0))
 
 // Hitung total harga
-const totalPrice = computed(() => state.items.reduce((sum, item) => sum + item.price * item.qty, 0))
+const totalPrice = computed(() =>
+  formatPrice(state.items.reduce((sum, item) => sum + item.price * item.qty, 0)),
+)
+
+const decrease = (id) => {
+  const item = state.items.find((item) => item.id === id)
+  if (item) {
+    if (item.qty > 1) {
+      item.qty-- // Kurangi qty jika lebih dari 1
+    } else {
+      remove(id) // Hapus item jika qty sudah 1
+    }
+  }
+}
+
+function formatPrice(price) {
+  return (parseInt(price) * 1000).toLocaleString('id-ID')
+}
 
 // Export jadi satu object
 export const cart = {
@@ -34,4 +51,6 @@ export const cart = {
   remove,
   totalItems,
   totalPrice,
+  decrease,
+  formatPrice,
 }

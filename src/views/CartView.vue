@@ -19,11 +19,13 @@ import { ClockIcon, CreditCardIcon, ShieldCheckIcon, TruckIcon } from '@heroicon
 
           <div class="col-span-2">
             <p class="font-semibold">{{ item.name }}</p>
-            <p class="text-sm text-gray-500">IDR {{ item.price }}K</p>
+            <p class="text-sm text-gray-500">IDR {{ cart.formatPrice(item.price) }}</p>
           </div>
 
           <div class="flex items-center gap-3">
-            <span>Qty: {{ item.qty }}</span>
+            <button @click="cart.decrease(item.id)" class="text-red-500 text-sm">-</button>
+            <span>{{ item.qty }}</span>
+            <button @click="cart.add(item)" class="text-green-500 text-sm">+</button>
             <button @click="cart.remove(item.id)" class="text-red-500 text-sm">Hapus</button>
           </div>
         </div>
@@ -43,7 +45,7 @@ import { ClockIcon, CreditCardIcon, ShieldCheckIcon, TruckIcon } from '@heroicon
 
           <div class="flex justify-between text-gray-500">
             <span>Subtotal</span>
-            <span>IDR {{ cart.totalPrice }}K</span>
+            <span>IDR {{ cart.totalPrice }}</span>
           </div>
 
           <div class="flex justify-between text-gray-500">
@@ -53,7 +55,7 @@ import { ClockIcon, CreditCardIcon, ShieldCheckIcon, TruckIcon } from '@heroicon
 
           <div class="border-t border-gray-100 pt-3 flex justify-between font-semibold text-lg">
             <span>Total</span>
-            <span>IDR {{ cart.totalPrice }}K</span>
+            <span>IDR {{ cart.totalPrice }}</span>
           </div>
         </div>
 
