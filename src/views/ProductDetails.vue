@@ -1,7 +1,7 @@
 <script setup>
-import { useRoute } from 'vue-router'
+import { cart } from '@/stores/cart'
 import { computed } from 'vue'
-
+import { useRoute } from 'vue-router'
 const route = useRoute()
 
 // Dummy data produk (seharusnya dari API/database)
@@ -104,7 +104,10 @@ const product = computed(() => {
         </div>
 
         <div class="flex gap-4 pt-4">
-          <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+          <button
+            class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+            @click="cart.add(product)"
+          >
             Add to Cart
           </button>
           <button class="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 transition">
