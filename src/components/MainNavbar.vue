@@ -5,6 +5,7 @@ import {
   HeartIcon,
   MagnifyingGlassIcon,
   ShoppingBagIcon,
+  UserIcon,
 } from '@heroicons/vue/24/outline'
 </script>
 
@@ -50,6 +51,11 @@ import {
             >
               {{ cart.totalItems }}
             </span>
+          </RouterLink>
+
+          <!-- ACTION BUTTON -->
+          <RouterLink to="/login" class="p-2 hover:bg-gray-100 rounded-full" title="Masuk">
+            <UserIcon class="w-5 h-5" />
           </RouterLink>
 
           <!-- ACTION BUTTON MOBILE -->

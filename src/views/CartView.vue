@@ -82,11 +82,12 @@ import { ClockIcon, CreditCardIcon, ShieldCheckIcon, TruckIcon } from '@heroicon
           </div>
         </div>
 
-        <button
+        <RouterLink
+          to="/checkout"
           class="w-full bg-blue-600 text-white py-3 my-4 rounded-xl font-medium hover:bg-blue-700 transition"
         >
           Checkout Sekarang
-        </button>
+        </RouterLink>
 
         <p class="text-xs text-gray-400 text-center">Transaksi aman & terenkripsi.</p>
       </div>

@@ -33,9 +33,9 @@ const decrease = (id) => {
   const item = state.items.find((item) => item.id === id)
   if (item) {
     if (item.qty > 1) {
-      item.qty-- // Kurangi qty jika lebih dari 1
+      item.qty--
     } else {
-      remove(id) // Hapus item jika qty sudah 1
+      remove(id)
     }
   }
 }
